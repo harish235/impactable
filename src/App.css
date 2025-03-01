@@ -1,38 +1,257 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  font-size: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: 'Lato', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.homepage {
+  width: 100%;
+  position: relative;
+  height: 900px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homepage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/main-bg.png');
+  background-size: cover;
+  background-attachment: scroll;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.home-gradient {
+  background: linear-gradient(90deg, #001e4a, #02051D00);
+  height: 100%;
+}
+/* Top bar styling */
+.topbar {
+  height: 80px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0 75px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contact-btn {
+  background-color: #0096FF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  height: 40px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.navbar {
+  padding: 0 75px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s, background-color 0.3s;
+  font-family: inter;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-item:hover {
+  color: #0090FF;
+}
+
+.nav-item:hover .dropdown-icon {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(98%) saturate(1265%) hue-rotate(190deg) brightness(97%) contrast(101%);
+}
+
+.nav-item.active {
+  color: #0090FF;
+  font-weight: bold;
+  border-top: 2px solid #0090FF;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff !important;
+  color: #00006e;
+  list-style: none;
+  padding: 0px 0;
+  margin: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  min-width: 220px;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #d9d8d8;
+  border-radius: 8px;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-icon {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.hero {
+  height: 325px;
+  display: flex;
+  align-items: center;
+  padding: 100px 75px 0px;
+  color: white;
+  margin-bottom: 100px; 
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 50px;
+  font-weight: 400;
+  padding-top: 15px;
+}
+
+.explore-btn {
+  background-color: #0090FF;
+  width: 233px;
+  height: 45px;
+  color: white;
+  border: none;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+
+}
+
+.cards-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  bottom: 140px;
+  position: relative;
+}
+
+@media (min-width: 769px) {
+  .cards-section > * {
+    width: 30%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .cards-section {
+    flex-direction: column;
   }
+  
+  .cards-section > * {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 28%;
+  text-align: center;
+}
+
+.card p {
+  font-family: inter;
+  text-align: left;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-title {
+  margin-top: 0px;
+  margin-bottom: 3px;
+  color: #002E72;
+}
+
+.card-icon {
+  width: 38px;
+}
+.card-subtitle {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.card-holder {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+}
+.footer {
+  background-color: white;
+  text-align: center;
+  font-family: 'Lato';
+  color: #545454;
 }
