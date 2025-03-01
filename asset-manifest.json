@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/impactable/static/css/main.2b849429.css",
+    "main.js": "/impactable/static/js/main.546e62e8.js",
+    "static/js/453.0c73395f.chunk.js": "/impactable/static/js/453.0c73395f.chunk.js",
+    "static/media/main-bg.png": "/impactable/static/media/main-bg.c93d99504cab781d6f73.png",
+    "index.html": "/impactable/index.html",
+    "main.2b849429.css.map": "/impactable/static/css/main.2b849429.css.map",
+    "main.546e62e8.js.map": "/impactable/static/js/main.546e62e8.js.map",
+    "453.0c73395f.chunk.js.map": "/impactable/static/js/453.0c73395f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b849429.css",
+    "static/js/main.546e62e8.js"
+  ]
+}
